@@ -1,15 +1,27 @@
+using System;
 using UnityEngine;
 
 public class HexagonCell : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public Vector2Int CellValue { get; private set; }
+    private HexagonTabletop _tabletop;
+    private void Start()
     {
-        
+        _tabletop = GetComponentInParent<HexagonTabletop>();
+
+        CellValue = new Vector2Int(
+            Convert.ToInt32(transform.localPosition.x / _tabletop.GetComponent<Grid>().cellSize.x),
+            Convert.ToInt32(transform.localPosition.y / _tabletop.GetComponent<Grid>().cellSize.y));
+
+        _tabletop.CreateCell(CellValue, this);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void HoverCell()
+    {
+
+    }
+
+    public void SelectCell()
     {
         
     }
