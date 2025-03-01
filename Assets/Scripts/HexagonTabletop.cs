@@ -3,20 +3,29 @@ using UnityEngine;
 
 public class HexagonTabletop : MonoBehaviour
 {
-    private Dictionary<Vector2Int, HexagonCell> _grid;
+    public Dictionary<Vector2, HexagonCell> Cells { get; private set; }
+
+    public Grid Grid { get; private set; }
 
     private void Awake()
     {
-        _grid = new Dictionary<Vector2Int, HexagonCell>();
+        Cells = new Dictionary<Vector2, HexagonCell>();
+        Grid = GetComponent<Grid>();
+
+        CreateCells();
     }
 
-    public void CreateCell(Vector2Int vec, HexagonCell cell)
+    public void CreateCells()
     {
-        _grid[vec] = cell;
+        HexagonCell[] cells = GetComponentsInChildren<HexagonCell>();
+
+        Debug.Log("Found " + cells.Length + " cells.");
+
+        foreach ( HexagonCell cell in cells)
+            Cells[cell.InitializeCell(this)] = cell;
+        
+        Debug.Log("Initialized " + Cells.Count + " cells.");
     }
 
-    public HexagonCell GetCell(Vector2Int vec)
-    {
-        return _grid[vec];
-    }
+    public HexagonCell GetCell(Vector2 pos) => Cells.TryGetValue(pos, out var tile) ? tile : null;
 }
