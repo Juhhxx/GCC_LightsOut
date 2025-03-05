@@ -300,7 +300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d00f6002afe7b43845149bbb4a2f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _horizontal: 1
+  _horizontal: 0
+  _centerObjects: 1
   _spacing: 0
 --- !u!1 &410087039
 GameObject:
@@ -692,7 +693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1365658248
 RectTransform:
   m_ObjectHideFlags: 0
