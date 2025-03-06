@@ -14,7 +14,7 @@ public class LayoutGroup3D : MonoBehaviour
     }
     public void AddChildren(GameObject child)
     {
-        child.transform.SetParent(transform);
+        child.transform.SetParent(transform,false);
         _children.Add(child);
         AlignChildren();
     }
@@ -28,8 +28,8 @@ public class LayoutGroup3D : MonoBehaviour
     {
         if (transform.childCount > 0)
         {
-            // Get the position Vector of the parent
-            Vector3 offsetVector = transform.position;
+            // Start the offsetVector at (0, 0, 0)
+            Vector3 offsetVector = Vector3.zero;
 
             foreach (GameObject child in _children)
             {
@@ -52,7 +52,7 @@ public class LayoutGroup3D : MonoBehaviour
                 }
 
                 // Apply the offsetVector to the childs position
-                child.transform.position = offsetVector;
+                child.transform.localPosition = offsetVector;
 
                 Debug.Log($"Child {child.transform.GetSiblingIndex()} offseted by {offsetVector}");
             }
@@ -69,7 +69,7 @@ public class LayoutGroup3D : MonoBehaviour
                         Vector3 alignedVector = offsetVector / 2;
                         
                         // Move the child object by the alignedVector value
-                        child.transform.position -= alignedVector;
+                        child.transform.localPosition -= alignedVector;
                     }
                 }
             }

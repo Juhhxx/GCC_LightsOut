@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BattleSprite: {fileID: 2800000, guid: 9c76e04abeb67f84da05ff0ce5e17ee6, type: 3}
   Portrait: {fileID: 2800000, guid: 575ab80e310b8b843af8eb8e393a61fb, type: 3}
+  Name: Guy
   HP: 100
   Def: 20
   Attck: 10

@@ -5,6 +5,7 @@ public class Character : ScriptableObject
 {
     public Texture BattleSprite;
     public Texture Portrait;
+    public string Name;
     public int HP;
     public int Def;
     public int Attck;
@@ -15,6 +16,7 @@ public class Character : ScriptableObject
 
         newChar.BattleSprite    = character.BattleSprite;        
         newChar.Portrait        = character.Portrait;
+        newChar.Name            = character.Name;
         newChar.HP              = character.HP;
         newChar.Def             = character.Def;
         newChar.Attck           = character.Attck;

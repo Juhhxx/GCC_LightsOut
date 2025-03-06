@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Waxrrior
   m_EditorClassIdentifier: 
   BattleSprite: {fileID: 2800000, guid: a3b8146bbd6a50d4b80017abd1b871e0, type: 3}
-  Portrait: {fileID: 0}
+  Portrait: {fileID: 2800000, guid: a9716bf08e78c5d43aab7cba4093ae5c, type: 3}
+  Name: Waxrrior
   HP: 30
   Def: 40
   Attck: 70
