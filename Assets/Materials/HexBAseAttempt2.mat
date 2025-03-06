@@ -41,10 +41,10 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ScrollSpeed: 0.3
-    - _TransparencyDistance: 0.87
+    - _TransparencyDistance: 6.54
     m_Colors:
     - _BorderColor: {r: 0.8249998, g: 0, b: 1, a: 0}
-    - _MainColor: {r: 0.74509805, g: 0.54171133, b: 0, a: 0}
+    - _MainColor: {r: 0.09264807, g: 0.2675032, b: 3.9282787, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &4805226337497848356
